@@ -1,5 +1,5 @@
 const path = require("path");
-
+const htmlPlugin = require("html-webpack-plugin");
 module.exports = {
 	mode: "development",
 	entry: path.resolve(__dirname, "src/index.js"),
@@ -15,4 +15,5 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [new htmlPlugin({ title: "valerii webpack", filename: "index.html", template: "src/template.html" })],
 };
